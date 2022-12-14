@@ -13,9 +13,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         val btnLogin : Button = findViewById(R.id.login2)
-//        btnLogin.setOnClickListener {
-//            val intent = Intent(this, SignUpActivity::class.java)
-//            startActivity(intent)
-//        }
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, CalenderActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

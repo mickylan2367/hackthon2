@@ -16,16 +16,16 @@ interface UserDao {
     @Delete
     fun delete(user : User)
 
-    @Query("delete from users")
-    fun deleteAll()
+//    @Query("delete from users")
+//    fun deleteAll()
+//
+//    @Query("select * from users")
+//    fun getAll(): List<User>
+//
+//    @Query("select * from users where id = :id")
+//    fun getUser(id: Int): User
 
-    @Query("select * from users")
-    fun getAll(): List<User>
-
-    @Query("select * from users where id = :id")
-    fun getUser(id: Int): User
-
-    @Query("select user_name from users")
+//    @Query("select user_name from users")
 //    List(NameTuple??)
-    fun loadFullName()
+//    fun loadFullName()
 }

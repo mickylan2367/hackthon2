@@ -12,7 +12,7 @@ class SignUpFinishActivity : AppCompatActivity() {
 
         val btnFinish: Button = findViewById(R.id.btnSignUpFinish)
         btnFinish.setOnClickListener {
-            val intent = Intent(this, SignUpFinishActivity::class.java)
+            val intent = Intent(this, CalenderActivity::class.java)
             startActivity(intent)
         }
     }

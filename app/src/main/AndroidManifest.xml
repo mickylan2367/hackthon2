@@ -13,6 +13,20 @@
         android:theme="@style/Theme.P2hacksApp"
         tools:targetApi="31">
         <activity
+            android:name=".ShowDiaryActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CalenderActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".SignUpFinishActivity"
             android:exported="false">
             <meta-data
