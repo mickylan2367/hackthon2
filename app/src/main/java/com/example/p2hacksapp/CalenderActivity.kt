@@ -5,11 +5,9 @@ import android.content.Intent
 import android.icu.text.SimpleDateFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.LinearLayout
-import android.widget.CalendarView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import java.util.*
 
 
@@ -41,11 +39,23 @@ class CalenderActivity : AppCompatActivity() {
         // 日付変更イベントを追加
         //日記。。。
         calenderView.setOnDateChangeListener { view, year, month, dayOfMonth ->
-//            Toast.makeText(this, "" + year + "-" + (month+1) + "-" + dayOfMonth, Toast.LENGTH_LONG).show()
-            val intent = Intent(this, ShowDiaryActivity::class.java)
+            Toast.makeText(this, "" + year + "-" + (month+1) + "-" + dayOfMonth, Toast.LENGTH_SHORT).show()
+            // intentで画面遷移する前に、押したボタンの日付を取得して現在の日付から数えて
+            // 1. 日付を超えているか
+            // 2. 何日まえの過去かを取得
+            val intent = Intent(this, PopUpActivity::class.java)
             startActivity(intent)
         }
+
+        //長押し。感知してくれない
+        //ちなみに、ボタンだったら感知してくれたみたい
+        calenderView.setOnLongClickListener { view->
+            Toast.makeText(this, "Long Click detected", Toast.LENGTH_LONG).show()
+            (return@setOnLongClickListener true) as Boolean
+        }
+
     }
+
 
 
 }

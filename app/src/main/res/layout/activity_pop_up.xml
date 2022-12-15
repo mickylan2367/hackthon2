@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/space"
+    tools:context=".PopUpActivity">
+
+
+    <Button
+        android:id="@+id/btn_diary"
+        android:layout_width="330dp"
+        android:layout_height="180dp"
+        android:layout_marginBottom="220dp"
+        android:backgroundTint="#9FDBBDCC"
+        android:text="Dairy"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_fortune"
+        android:layout_width="330dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="#8A7F3862"
+        android:text="Fortune Telling"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose your Action"
+        android:textColor="#C6D6D2"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_diary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="330dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#8ABFAA98"
+        android:text="back to calender"
+        android:textColor="#D8D3DC"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fortune" />
+</androidx.constraintlayout.widget.ConstraintLayout>

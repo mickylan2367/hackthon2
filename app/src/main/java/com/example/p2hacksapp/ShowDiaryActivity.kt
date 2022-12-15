@@ -9,7 +9,7 @@ import androidx.viewpager2.widget.ViewPager2
 /**
  * The number of pages (wizard steps) to show in this demo.
  */
-private const val NUM_PAGES = 100
+private const val NUM_PAGES = 5
 
 class ShowDiaryActivity : FragmentActivity() {
 
@@ -63,9 +63,13 @@ class ShowDiaryActivity : FragmentActivity() {
                 2 -> {
                     DiaryFragment2.newInstance()
                 }
+                3 -> {
+                    NewDiaryFragment.newInstance()
+                }
                 else -> {
                     DiaryFragment2.newInstance()
                 }
             }
     }
+
 }
