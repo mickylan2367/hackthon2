@@ -1,6 +1,5 @@
 package com.example.p2hacksapp
 import android.os.Bundle
-import android.view.MotionEvent
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -12,7 +11,7 @@ import androidx.viewpager2.widget.ViewPager2
  */
 private const val NUM_PAGES = 5
 
-class ShowDiaryActivity : FragmentActivity() {
+class ShowFortuneLogActivity : FragmentActivity() {
 
     /**
      * The pager widget, which handles animation and allows swiping horizontally to access previous
@@ -22,10 +21,10 @@ class ShowDiaryActivity : FragmentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_show_diary)
+        setContentView(R.layout.activity_show_fortune_log)
 
         // Instantiate a ViewPager2 and a PagerAdapter.
-        viewPager = findViewById(R.id.pager)
+        viewPager = findViewById(R.id.pager2)
 
         // The pager adapter, which provides the pages to the view pager widget.
         val pagerAdapter = ScreenSlidePagerAdapter(this)
@@ -56,19 +55,19 @@ class ShowDiaryActivity : FragmentActivity() {
         override fun createFragment(position: Int): Fragment =
             when(position) {
                 0 -> {
-                    ScreenSlidePageFragment.newInstance()
+                    FortuneFragment1.newInstance()
                 }
                 1 -> {
-                    DairyFragment1.newInstance()
+                    FortuneFragment2.newInstance()
                 }
                 2 -> {
-                    DiaryFragment2.newInstance()
+                    FortuneFragment3.newInstance()
                 }
                 3 -> {
-                    NewDiaryFragment.newInstance()
+                    NewFortuneLogFragment.newInstance()
                 }
                 else -> {
-                    DiaryFragment2.newInstance()
+                    NewFortuneLogFragment.newInstance()
                 }
             }
     }

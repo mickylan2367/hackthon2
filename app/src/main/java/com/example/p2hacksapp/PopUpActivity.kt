@@ -21,14 +21,14 @@ class PopUpActivity : AppCompatActivity() {
         }
 
         btn_fortune.setOnClickListener{
-            val intent = Intent(this, ShowDiaryActivity::class.java)
+            val intent = Intent(this, ShowFortuneLogActivity::class.java)
             startActivity(intent)
         }
-//
-//        btn_back.setOnClickListener{
-//            val intent = Intent(this, CalenderActivity::class.java)
-//            startActivity(intent)
-//        }
+
+        btn_back.setOnClickListener{
+            val intent = Intent(this, CalenderActivity::class.java)
+            startActivity(intent)
+        }
 
         btn_back.setOnLongClickListener{ view->
             Toast.makeText(this, "Long Click detected", Toast.LENGTH_LONG).show()
